@@ -1,3 +1,4 @@
+//we use memorizarion
 import java.util.Scanner;
 
 public class fabonaci_series_dp {
@@ -9,7 +10,7 @@ public class fabonaci_series_dp {
         System.out.println(fabo(number,arr));
     }
     static int fabo(int n, int[] arr){
-        if(n == 0 & n==1 )
+        if(n == 0 || n==1 )
             return n;
         if(arr[n]!=0)
             return arr[n];
