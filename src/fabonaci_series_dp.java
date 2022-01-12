@@ -8,7 +8,16 @@ public class fabonaci_series_dp {
         int arr[] = new int[number+1];
         System.out.println(fabo(number,arr));
     }
-    static int fabo(int n,int[] arr){
-     return 0;
+    static int fabo(int n, int[] arr){
+        if(n == 0 & n==1 )
+            return n;
+        if(arr[n]!=0)
+            return arr[n];
+        int a = fabo(n-1,arr);
+        int b = fabo(n-2,arr);
+        int sum = a+b;
+
+        arr[n] = sum;
+        return sum;
     }
 }
