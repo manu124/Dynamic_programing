@@ -20,12 +20,12 @@ public class Target_Sum_subset {
                 } else if (j == 0) {
                     dp[i][j] = true;
                 } else {//we check immidate above
-                    if (dp[i - 1][j] == true) {
+                    if (dp[i - 1][j]) {
                         dp[i][j] = true;
                     } else {
                         int val = arr[i - 1];
                         if (j >= val) {
-                            if (dp[i - 1][j - val] == true)
+                            if (dp[i - 1][j - val])
                                 dp[i][j] = true;
                         }
                     }
